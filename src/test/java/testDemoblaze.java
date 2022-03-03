@@ -23,6 +23,7 @@ public class testDemoblaze {
         laptopsCategory.click();
         WebElement laptopSonyVaioI5 = driver.findElement(By.linkText("Sony vaio i5"));
         laptopSonyVaioI5.click();
+        /*El error comienza aqui, no me encuentra el elemento, probe con varios selector pero siempre rompe aca*/
         WebElement laptopPrice = driver.findElement(By.className("price-container"));
         laptopPrice.getText();
         
