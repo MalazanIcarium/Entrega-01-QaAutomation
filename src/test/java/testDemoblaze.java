@@ -18,15 +18,18 @@ public class testDemoblaze {
         driver.get(url);
         driver.navigate().to(url);
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         WebElement laptopsCategory = driver.findElement(By.linkText("Laptops"));
         laptopsCategory.click();
         WebElement laptopSonyVaioI5 = driver.findElement(By.linkText("Sony vaio i5"));
         laptopSonyVaioI5.click();
-        /*El error comienza aqui, no me encuentra el elemento, probe con varios selector pero siempre rompe aca*/
+        WebElement laptopModel = driver.findElement(By.className("name"));
+        laptopModel.getText();
         WebElement laptopPrice = driver.findElement(By.className("price-container"));
         laptopPrice.getText();
-        
+        WebElement addCartButton = driver.findElement(By.className("btn-success"));
+        addCartButton.click();
         driver.quit();        
     }
 
